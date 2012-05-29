@@ -1,0 +1,54 @@
+<html>
+	<body>
+		<div>
+			<h2>code</h2>
+			<form action="/" method="post">
+<textarea name="code" rows="15" cols="60">
+<% if @code %>
+<%= @code %>
+<% end %>
+</textarea>
+			<br/>
+			<input type="submit">
+			</form>
+		</div>
+		<div>
+			<h2>result</h2>
+			<pre>
+			<code>
+<%= @result %>
+			</code>
+			</pre>
+		</div>
+		<% if @stdout %>
+			<div>
+				<h2>stdout</h2>
+				<pre>
+				<code>
+<%= @stdout %>
+				</code>
+				</pre>
+			</div>
+		<% end %>
+		<% if @stderr %>
+			<div>
+				<h2>stderr</h2>
+				<pre>
+				<code>
+<%= @stderr %>
+				</code>
+				</pre>
+			</div>
+		<% end %>
+		<% if @exception %>
+			<div>
+				<h2>exception</h2>
+				<pre>
+				<code>
+<%= @exception %>
+				</code>
+				</pre>
+			</div>
+		<% end %>
+	</body>
+</html>
